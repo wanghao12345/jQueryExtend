@@ -13,7 +13,7 @@
 			end:{},
 			onEnd:$.noop
 		},
-		this.init(this.options);
+		this.init(options);
 	}
 	Fly.prototype = {
 		/**
@@ -116,14 +116,11 @@
 
 	$.fn.fly = function(options){
 		return new Fly(this,options);
-/*	    return this.each(function () {
+		/*return this.each(function () {
 	      if (undefined == $(this).data('fly')) {
 	        $(this).data('fly', new Fly(this,options));
 	      }
 	    });*/
-
-
-
 	}
 
 })(jQuery,window,document);
