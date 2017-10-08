@@ -28,9 +28,24 @@
 		setOptions:function(options){
 			this.settings = $.extend({},this.defaults,options);
 			var settings = this.settings;
-
 			console.log(settings);
-
+			this.creatHtml(settings,1);
+		},
+		creatHtml:function(options,index){
+			var len = parseInt(options.totalpage);
+			console.log(len);
+			var str = '<ul><li><a>'+options.firstpage+'</a></li><li><a>'+options.prevpage+'</a></li>';
+			for (var i = 1; i <= 5; i++) {
+				if (i==index) {
+					str  = str + '<li class="pageactive"><a>'+i+'</a></li>';
+				} else {					
+					str  = str + '<li><a>'+i+'</a></li>';
+				}
+			}
+			str = str +'<li><a>'+options.nextpage+'</a></li><li><a>'+options.lastpage+'</a></li></ul>';
+			$('.box').append(str);
+		
+			$('.box ul li ')
 
 
 
