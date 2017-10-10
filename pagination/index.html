@@ -3,62 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>分页</title>
+	<link rel="stylesheet" type="text/css" href="css/pagination.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/pagination.js"></script>
-	<style>
-		html,body{
-			width: 100%;
-			height: 100%;
-			margin:0;
-		}
-		.box{
-			width: 40px;
-			height: 40px;
-			background-color: red;
-			border-radius: 40px;
-			margin-left: 100px;
-			margin-top: 200px;
-			cursor: pointer;
-		}
-		.box ul{
-			width: 500px;
-			overflow: hidden;
-		}
-		.box ul li{
-			list-style: none;
-			float: left;
-			margin:0 5px;
-		}
-		.box ul li.pageactive a{
-			color: #fff;
-		    background: #3c90d9;
-		    border: 1px solid #3c90d9;
-		}
-
-		.box ul li a{
-			display: block;
-			padding: 0 10px;
-			text-decoration: none;
-			border: 1px solid #ddd;
-			text-align: center;
-			line-height: 200%;
-			box-sizing: border-box;
-			color: #999;
-		}
-	</style>
 </head>
 <body>
-	<div class="box"></div>
+	<div class="box">
+		
+	</div>
 </body>
 <script type="text/javascript">
 	$(function(){
-		$('.box').on('click',function(){
-			$(this).page({});
-		})
-
-
-
-
+		var datas = [
+			{'id':1, 'text':'<li>1111111111</li>'},
+			{'id':2, 'text':'<li>1111111112</li>'},
+			{'id':3, 'text':'<li>1111111113</li>'},
+			{'id':4, 'text':'<li>1111111114</li>'},
+			{'id':5, 'text':'<li>1111111115</li>'},
+			{'id':6, 'text':'<li>1111111116</li>'},
+			{'id':7, 'text':'<li>1111111117</li>'},
+			{'id':8, 'text':'<li>1111111118</li>'},
+			{'id':9, 'text':'<li>1111111119</li>'},
+			{'id':10, 'text':'<li>1111111110</li>'},
+			{'id':11, 'text':'<li>1111111111</li>'},
+			{'id':12, 'text':'<li>1111111112</li>'},
+			{'id':13, 'text':'<li>1111111113</li>'},
+			{'id':14, 'text':'<li>1111111114</li>'},
+			{'id':15, 'text':'<li>1111111115</li>'},
+			{'id':16, 'text':'<li>1111111116</li>'},
+			{'id':17, 'text':'<li>1111111117</li>'},
+			{'id':18, 'text':'<li>1111111118</li>'},
+			{'id':19, 'text':'<li>1111111119</li>'},
+			{'id':20, 'text':'<li>11111111120</li>'},
+			{'id':21, 'text':'<li>11111111121</li>'},
+			{'id':22, 'text':'<li>11111111122</li>'},
+			{'id':23, 'text':'<li>11111111123</li>'},
+			{'id':24, 'text':'<li>11111111124</li>'}
+		];
+		$('.box').page({data:datas,totalviewpage:datas.length,insertDom:'.box'});
 	})
 </script>
 </html>
